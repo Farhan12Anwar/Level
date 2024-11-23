@@ -1,0 +1,164 @@
+/* Resetting default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+  line-height: 1.6;
+  margin: 0; /* Ensure no margin around the body */
+  padding: 0;
+}
+
+/* Centered container with max width and left-aligned padding */
+.app-container {
+  max-width: 100%;
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 20px;
+  text-align: center;
+  width: 100%; /* Ensure full width utilization */
+  box-sizing: border-box; /* Include padding in total width */
+  margin-left: 10px; /* Adjusted margin to move content slightly left */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align content to the left */
+}
+
+/* Header styling */
+h1 {
+  width: 100%;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+h2 {
+  width: 100%;
+  font-size: 1.8rem;
+  color: #444;
+  margin: 20px 0;
+  font-weight: 500;
+}
+
+/* Container for the number buttons */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr); /* Default: 10 columns */
+  gap: 15px;
+  justify-items: center;
+  margin-bottom: 50px;
+  width: 100%; /* Ensure the grid takes full width */
+  box-sizing: border-box;
+}
+
+/* Toggle button styles */
+.toggle-button {
+  width: 80px;
+  height: 80px;
+  background-color: #ffffff;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  font-size: 1.6rem; /* Increased font size */
+  font-weight: bold;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.toggle-button.white {
+  background-color: #ffffff;
+  color: #333;
+  border-color: #ddd;
+}
+
+.toggle-button.red {
+  background-color: #f44336;
+  color: white;
+  border-color: #e53935;
+}
+
+/* Hover effect on toggle buttons */
+.toggle-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Active state for toggle buttons */
+.toggle-button:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Media queries for responsive design */
+@media (max-width: 1200px) {
+  .grid-container {
+    grid-template-columns: repeat(8, 1fr); /* 8 columns on medium screens */
+  }
+}
+
+@media (max-width: 900px) {
+  .grid-container {
+    grid-template-columns: repeat(6, 1fr); /* 6 columns on smaller tablets */
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: repeat(4, 1fr); /* 4 columns on mobile devices */
+  }
+}
+
+@media (max-width: 400px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on small mobile devices */
+  }
+}
+
+/* Styling for the page's header (additional spacing, typography, and visual emphasis) */
+h1, h2 {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* More visually distinct grid separation */
+.grid-container {
+  margin-top: 30px;
+}
+
+.grid-container .toggle-button {
+  transition: all 0.3s ease;
+}
+
+/* Button font size adjustments for better readability on small screens */
+@media (max-width: 600px) {
+  .toggle-button {
+    font-size: 1.2rem; /* Slightly smaller font size on smaller devices */
+    width: 70px;
+    height: 70px;
+  }
+}
+
+/* Add a smooth fade-in effect for when the page loads */
+.app-container {
+  animation: fadeIn 0.8s ease-out;
+}
+
+/* Keyframe for fade-in effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

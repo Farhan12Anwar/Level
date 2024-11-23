@@ -1,0 +1,13 @@
+/* typography.css */
+:root {
+    --font-family: 'Roboto', sans-serif;
+    --font-size-small: 14px;
+    --font-size-medium: 16px;
+    --font-size-large: 20px;
+  }
+  
+  body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+  }
+  
