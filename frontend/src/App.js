@@ -134,7 +134,7 @@ const App = () => {
   useEffect(() => {
     // Fetch initial number states from the backend
     axios
-      .get("http://localhost:5000/api/numbers")
+      .get("https://level-1toh.onrender.com/api/numbers")
       .then((response) => {
         if (Array.isArray(response.data)) {
           // Set the numbers state with the data fetched from the backend
@@ -159,13 +159,13 @@ const App = () => {
 
     // Update the backend with the new color
     axios
-      .post("http://localhost:5000/api/numbers", { number, color: newColor })
+      .post("https://level-1toh.onrender.com/api/numbers", { number, color: newColor })
       .then((response) => {
         console.log(response.data.message); // Log the response (optional)
 
         // After successfully updating the backend, re-fetch the numbers
         axios
-          .get("http://localhost:5000/api/numbers")
+          .get("https://level-1toh.onrender.com/api/numbers")
           .then((response) => {
             if (Array.isArray(response.data)) {
               // Set the numbers state with the latest data from the backend
